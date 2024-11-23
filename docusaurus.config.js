@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '我的世界',
-  tagline: 'Dinosaurs are cool',
+  title: '皮卡的个猫空间',
+  tagline: 'Pika is cool',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -76,7 +76,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: '皮卡之家',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -88,11 +88,15 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
+          },
+          {
+            to: '/growth-path',
+            label: '成长小径',
+            position: 'left',
           },
         ],
       },

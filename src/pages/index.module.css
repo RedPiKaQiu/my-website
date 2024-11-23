@@ -21,3 +21,54 @@
   align-items: center;
   justify-content: center;
 }
+
+.profileCard {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.profilePhoto {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.profilePhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileContent {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.profileContent h2 {
+  color: #2e8555;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.profileInfo p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+}
+
+.profileInfo strong {
+  color: #2e8555;
+  width: 90px;
+  display: inline-block;
+}

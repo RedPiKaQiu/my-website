@@ -1,0 +1,133 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  color: var(--ifm-color-primary);
+  margin-bottom: 3rem;
+  font-size: 50px;
+  font-family: "圆体", "Microsoft YaHei", sans-serif;
+  letter-spacing: 3px;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--ifm-color-primary);
+}
+
+.timelineEvent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timelineDate {
+  position: absolute;
+  left: 0;
+  width: 120px;
+  text-align: right;
+  padding-right: 20px;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.timelineContent {
+  margin-left: 150px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.timelineContent img {
+  max-width: 256px;
+  max-height: 256px;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.timelineContent p {
+  margin: 0;
+  color: #666;
+  text-align: center;
+}
+
+.timelineContinue {
+  text-align: center;
+  color: var(--ifm-color-primary);
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.goTopButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.goTopButton:hover {
+  opacity: 1;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timelineDate {
+    position: relative;
+    left: 50px;
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 0.5rem;
+    transform: none;
+    top: auto;
+  }
+
+  .timelineContent {
+    margin-left: 50px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+} 

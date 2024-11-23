@@ -28,3 +28,33 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* 添加以下背景图片相关的样式 */
+.hero {
+  background-image: url('/img/backgrounds/yu.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* 添加半透明遮罩以确保文字可读性 */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* 确保标题文字在遮罩层之上 */
+.hero__title,
+.hero__subtitle,
+.hero__subtitle + div {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
